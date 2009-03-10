@@ -121,9 +121,9 @@ elsif ARGV[0] == "install"
 
     # Install FeedUpdater gem to application vendor directory
     system("rm -rf #{install_vendor_directory}/feedupdater")
-    unpack_string = `gem unpack feedupdater`
+    unpack_string = `gem unpack KeeperPat-feedupdater`
     feed_updater_version =
-      unpack_string.scan(/feedupdater\-(.*)\'/).flatten[0]
+      unpack_string.scan(/KeeperPat\-feedupdater\-(.*)\'/).flatten[0]
     if feed_updater_version.nil? || feed_updater_version == ""
       puts "You need to have the feedupdater gem installed for the install"
       puts "subcommand to run correctly."
@@ -132,11 +132,11 @@ elsif ARGV[0] == "install"
     puts "Installing FeedUpdater #{feed_updater_version} " +
       "to vendor directory..."
 
-    system("cp -rp feedupdater-#{feed_updater_version} " +
+    system("cp -rp KeeperPat-feedupdater-#{feed_updater_version} " +
       "#{install_vendor_directory}")
-    system("rm -rf feedupdater-#{feed_updater_version}")
+    system("rm -rf KeeperPat-feedupdater-#{feed_updater_version}")
     system("mv #{install_vendor_directory}/" +
-      "feedupdater-#{feed_updater_version} " +
+      "KeeperPat-feedupdater-#{feed_updater_version} " +
       "#{install_vendor_directory}/feedupdater")
 
     # Install FeedTools gem to application vendor directory

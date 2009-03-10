@@ -1,3 +1,6 @@
+== FeedUpdater 0.2.7
+ * Update so feed_updater works with KeeperPat prefix.
+ * Bump version number so that github will republish the gem.
 == FeedUpdater 0.2.6
  * Updated for compatibility with RubyGems >= 1.0
 == FeedUpdater 0.2.5
